@@ -8,7 +8,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Poppins', sans-serif; background: var(--dark); color: var(--light); line-height: 1.6; }
 
-/* Navbar */
+
 .navbar {
     display: flex; justify-content: space-between; align-items: center;
     padding: 1rem 5%; background: rgba(18, 18, 18, 0.98);
@@ -18,7 +18,7 @@ body { font-family: 'Poppins', sans-serif; background: var(--dark); color: var(-
 .nav-links { display: flex; list-style: none; align-items: center; }
 .nav-links li a { color: white; text-decoration: none; margin: 0 15px; }
 
-/* Carrito Icono */
+
 .cart-container { position: relative; cursor: pointer; color: var(--primary); }
 #cart-count {
     position: absolute; top: -8px; right: -10px;
@@ -26,21 +26,20 @@ body { font-family: 'Poppins', sans-serif; background: var(--dark); color: var(-
     font-size: 0.7rem; font-weight: bold; padding: 2px 6px; border-radius: 50%;
 }
 
-/* Hero */
+
 .hero {
     height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200') center/cover;
 }
 .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--primary); }
 
-/* SECCIÓN PRODUCTOS (Aquí arreglamos el pegado) */
 .container { 
-    padding: 100px 5% 60px; /* Mucho espacio arriba para separar del hero */
+    padding: 100px 5% 60px;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 60px; /* Espacio debajo del título */
+    margin-bottom: 60px; 
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
 }
@@ -53,7 +52,7 @@ body { font-family: 'Poppins', sans-serif; background: var(--dark); color: var(-
     margin: 0 auto;
 }
 
-/* Tarjeta de Producto */
+
 .card { 
     background: var(--gray); 
     padding: 1.5rem; 
@@ -70,18 +69,16 @@ body { font-family: 'Poppins', sans-serif; background: var(--dark); color: var(-
     object-fit: cover; 
     border-radius: 10px; 
     cursor: pointer;
-    margin-bottom: 20px; /* Espacio entre imagen y texto */
+    margin-bottom: 20px; 
 }
 
 .card h3 { font-size: 1.4rem; margin-bottom: 10px; cursor: pointer; }
 .price { color: var(--primary); font-weight: bold; font-size: 1.2rem; margin-bottom: 20px; }
 
-/* Botones */
 .btn-main { background: var(--primary); color: var(--dark); padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 600; display: inline-block; }
 .btn-add { background: transparent; color: var(--primary); border: 1px solid var(--primary); padding: 10px; width: 100%; border-radius: 5px; cursor: pointer; transition: 0.3s; }
 .btn-add:hover { background: var(--primary); color: var(--dark); }
 
-/* Modales */
 .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); }
 .modal-content { background: var(--gray); margin: 8% auto; padding: 2.5rem; width: 90%; max-width: 550px; border-radius: 20px; position: relative; border: 1px solid var(--primary); }
 .close-modal { position: absolute; right: 20px; top: 10px; font-size: 2.5rem; cursor: pointer; color: var(--primary); }
