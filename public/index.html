@@ -6,7 +6,6 @@
     <title>Aura Glow | Expertos en Belleza</title>
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#121212">
-    
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/css/style.css">
 </head>
@@ -14,16 +13,10 @@
 
     <nav class="navbar">
         <div class="logo">AURA GLOW</div>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
         <ul class="nav-links">
             <li><a href="#home">Inicio</a></li>
             <li><a href="#productos">Productos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li class="cart-container">
+            <li class="cart-container" id="open-cart">
                 <span id="cart-count">0</span>
                 <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
                     <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
@@ -42,61 +35,68 @@
     </header>
 
     <section id="productos" class="container">
-        <h2>Colección Destacada</h2>
+        <h2 class="section-title">Colección Destacada</h2>
         <div class="grid-productos">
-            
             <div class="card">
-                <img src="/public/img/5143d60b-c96e-4c3f-a301-1b1491ccb603-image-0-1738920089242.png" alt="Velvet Matte">
-                <h3>Iluminador</h3>
+                <img src="/public/img/5143d60b-c96e-4c3f-a301-1b1491ccb603-image-0-1738920089242.png" alt="Iluminador" class="open-details">
+                <h3 class="open-details">Iluminador</h3>
                 <p class="price">$250.00</p>
                 <button class="btn-add">Añadir al carrito</button>
             </div>
 
             <div class="card">
-                <img src="/public/img/71WzKcCwI5L._AC_UF1000,1000_QL80_.jpg" alt="Satin Skin">
-                <h3>Sombra Negra</h3>
+                <img src="/public/img/71WzKcCwI5L._AC_UF1000,1000_QL80_.jpg" alt="Sombra Negra" class="open-details">
+                <h3 class="open-details">Sombra Negra</h3>
                 <p class="price">$420.00</p>
                 <button class="btn-add">Añadir al carrito</button>
             </div>
 
             <div class="card">
-                <img src="/public/img/FRAMBUESA.webp" alt="Desert Bloom">
-                <h3>Rubor</h3>
+                <img src="/public/img/FRAMBUESA.webp" alt="Rubor" class="open-details">
+                <h3 class="open-details">Rubor</h3>
                 <p class="price">$610.00</p>
                 <button class="btn-add">Añadir al carrito</button>
             </div>
 
             <div class="card">
-                <img src="/public/img/mac_sku_SRMX41_1x1_0.png.avif" alt="Stardust Glow">
-                <h3>Base</h3>
+                <img src="/public/img/mac_sku_SRMX41_1x1_0.png.avif" alt="Base" class="open-details">
+                <h3 class="open-details">Base</h3>
                 <p class="price">$380.00</p>
                 <button class="btn-add">Añadir al carrito</button>
             </div>
-
         </div>
     </section>
 
-    <footer id="contacto">
-        <div class="footer-content">
-            <p>AURA GLOW STUDIO</p>
-            <p>Expertos en maquillaje profesional y cuidado de la piel.</p>
-            <p>&copy; 2026 Todos los derechos reservados.</p>
-        </div>
-    </footer>
-    <div id="cart-modal" class="modal">
-    <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <h2>Tu Carrito</h2>
-        <div id="cart-items">
-            <p>El carrito está vacío</p>
-        </div>
-        <div class="cart-total">
-            <p>Total: <span id="total-price">$0.00</span></p>
-            <button class="btn-main">Finalizar Compra</button>
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-product">&times;</span>
+            <div class="product-detail-flex">
+                <img id="detail-img" src="" alt="">
+                <div class="detail-info">
+                    <h2 id="detail-title"></h2>
+                    <p id="detail-desc"></p>
+                    <p class="detail-price" id="detail-price"></p>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
-<script src="/public/js/main.js"></script>
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-cart">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="cart-items-list"></div>
+            <div class="cart-total-section">
+                <p>Total: <span id="total-price">$0.00</span></p>
+                <button class="btn-main" style="width:100%; margin-top:15px;">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contacto">
+        <p>AURA GLOW STUDIO &copy; 2026</p>
+    </footer>
+
+    <script src="/public/js/main.js"></script>
 </body>
 </html>
