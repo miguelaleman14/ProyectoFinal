@@ -1,0 +1,17 @@
+{
+  "name": "Aura Glow Beauty Studio",
+  "short_name": "AuraGlow",
+  "description": "Maquillaje profesional y catálogo de belleza.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#e5b3a3",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3524/3524335.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
