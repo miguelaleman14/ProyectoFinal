@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. REGISTRO PWA
+
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js');
     }
 
-    // 2. DATOS ESPECIFICACIONES
+
     const especificaciones = {
         "Iluminador": "Brillo perlado de alta gama. Define y resalta tus facciones con un acabado natural.",
         "Sombra Negra": "Pigmentación extrema mate. Ideal para efectos de profundidad y smokey eyes.",
@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let carrito = [];
     const cartCount = document.getElementById('cart-count');
 
-    // 3. LÓGICA DE DETALLES
     document.querySelectorAll('.open-details').forEach(el => {
         el.onclick = (e) => {
             const card = e.target.closest('.card');
@@ -31,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     });
 
-    // 4. LÓGICA DE CARRITO
     document.querySelectorAll('.btn-add').forEach(btn => {
         btn.onclick = (e) => {
             const card = e.target.closest('.card');
@@ -40,18 +38,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 precio: parseFloat(card.querySelector('.price').innerText.replace('$', ''))
             });
             
-            // Animación contador
+           
             cartCount.innerText = carrito.length;
             cartCount.classList.add('bump');
             setTimeout(() => cartCount.classList.remove('bump'), 300);
 
-            // Feedback botón
+            
             btn.innerText = "¡Agregado!";
             setTimeout(() => btn.innerText = "Añadir al carrito", 1000);
         };
     });
 
-    // Abrir Carrito
+
     document.getElementById('open-cart').onclick = () => {
         const cartList = document.getElementById('cart-items-list');
         const totalPrice = document.getElementById('total-price');
@@ -70,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('cart-modal').style.display = "block";
     };
 
-    // Cerrar Modales
     document.getElementById('close-cart').onclick = () => document.getElementById('cart-modal').style.display = "none";
     document.getElementById('close-product').onclick = () => document.getElementById('product-modal').style.display = "none";
 
