@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, () => {
     console.log('-------------------------------------------');
-    console.log(`🚀 Aura Glow funcionando en: http://localhost:${PORT}`);
-    console.log(`📂 Carpeta pública: ${path.join(__dirname, 'public')}`);
+    console.log(`Aura Glow funcionando en: http://localhost:${PORT}`);
+    console.log(`Carpeta pública: ${path.join(__dirname, 'public')}`);
     console.log('-------------------------------------------');
 });
